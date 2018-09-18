@@ -17,6 +17,26 @@
     <br><br>
     Last  Name: <form:input path="lastName"/>
 
+    <br><br>
+
+    Country:
+  <%--  <form:select path="country">
+        <form:options items="${student.countryOptions}"/>
+
+    </form:select>--%>
+
+    <form:select path="country">
+        <form:options items="${theCountryOptions}" />
+    </form:select>
+    <br><br>
+    Favorite Languatge:
+    <%--Java <form:radiobutton path="favoriteLanguage" value="java"/>
+    C# <form:radiobutton path="favoriteLanguage" value="C#"/>
+    PHP <form:radiobutton path="favoriteLanguage" value="PHP"/>
+    Ruby <form:radiobutton path="favoriteLanguage" value="Ruby"/>--%>
+    <form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"/>
+
+    <br><br>
     <input type="submit" value="Submit">
 
 </form:form>
